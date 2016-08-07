@@ -1,0 +1,26 @@
+package basics;
+
+import java.sql.ResultSet;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		Start1 testStart= new Start1();
+		
+		ResultSet resultSet;
+		
+		resultSet = testStart.displayItems();
+		
+		while(resultSet.next()){
+			
+			System.out.println(resultSet.getString("item") + "  " + resultSet.getFloat("price"));
+			
+		}
+
+	}
+
+}
